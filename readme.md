@@ -41,11 +41,14 @@ jarvis-assistant
 3. Install the required packages:
    ```
    pip install -r requirements.txt
+
+4. pip install PyAudio
    ```
 
 4. Set up your environment variables 
    ```
    Line 35
    Authorization="your_deepseek_api_key"
+
    
    ```
