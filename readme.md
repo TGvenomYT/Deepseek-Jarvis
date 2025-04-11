@@ -42,7 +42,9 @@ jarvis-assistant
    ```
    pip install -r requirements.txt
 
-4. pip install PyAudio
+4. install PyAudio
+```
+   pip install PyAudio
    ```
 
 4. Set up your environment variables 
