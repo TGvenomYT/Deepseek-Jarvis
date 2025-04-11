@@ -7,6 +7,11 @@ import pyttsx3
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
 
+# List available voices
+voices = engine.getProperty('voices')
+for index, voice in enumerate(voices):
+    print(f"Voice {index}: {voice.name}")
+
 # Function to convert text to speech
 def speak(text):
     engine.say(text)
