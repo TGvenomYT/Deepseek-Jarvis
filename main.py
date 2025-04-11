@@ -1,16 +1,24 @@
 import requests
 import speech_recognition as sr
 import pyttsx3
-
+import os
 
 # Initialize the recognizer and text-to-speech engine
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
+Authorization=os.getenv('Authorization')
 
 # List available voices
 voices = engine.getProperty('voices')
 for index, voice in enumerate(voices):
     print(f"Voice {index}: {voice.name}")
+
+# Set the desired voice (e.g., the second voice in the list)
+if len(voices) > 29:
+    engine.setProperty('voice', voices[27].id)
+else:
+    print("Voice index 29 is out of range. Using default voice.")
+    
 
 # Function to convert text to speech
 def speak(text):
